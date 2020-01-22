@@ -1,0 +1,41 @@
+{
+  "name": "snippets-app",
+  "version": "1.0.0",
+  "description": "Frontend for web application that manages Snippets and Collection of Snippets",
+  "author": "Dare Adewole II",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "axios": "^0.19.1",
+    "nuxt": "^2.0.0",
+    "nuxt-typed-vuex": "^0.1.15",
+    "scrollreveal": "^4.0.5"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^0.5.6",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "jest": "^24.1.0",
+    "node-sass": "^4.13.1",
+    "nuxt-property-decorator": "^2.5.0",
+    "sass-loader": "^8.0.2",
+    "vue-jest": "^4.0.0-0",
+    "vue-property-decorator": "^8.3.0",
+    "vuex-module-decorators": "^0.11.0"
+  }
+}
