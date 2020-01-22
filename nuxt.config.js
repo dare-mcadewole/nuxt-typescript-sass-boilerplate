@@ -56,7 +56,7 @@ export default {
   */
   plugins: [
     '~/plugins/axios.ts',
-    '~/plugins/font-awesome.js'
+    '~/plugins/font-awesome.js',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -97,7 +97,7 @@ export default {
     ** You can extend webpack config here
     */
    transpile: [
-    //  /typed-vuex/
+     /typed-vuex/
    ],
     extend (config, ctx) {
     }

@@ -1,9 +1,4 @@
 import Vue from 'vue'
-import Axios, { AxiosInstance } from 'axios'
+import $axios from '~/utils/api'
 
-var axios: AxiosInstance = Axios.create({
-    baseURL: process.env.BASE_URL,
-    timeout: 10000
-})
-
-Vue.prototype.$http = axios
+Vue.prototype.$http = $axios

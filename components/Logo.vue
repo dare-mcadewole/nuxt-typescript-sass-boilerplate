@@ -1,9 +1,10 @@
 <template>
-  <h1 class="logo">Snippets</h1>
+  <h1 class="logo">{{ AppName }}</h1>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator'
+import { baseStore } from '~/store'
 
 @Component
 export default class Logo extends Vue {
@@ -11,6 +12,10 @@ export default class Logo extends Vue {
     type: Number,
     default: 38
   }) readonly size !: Number
+
+  get AppName (): string {
+    return baseStore.app
+  }
 }
 </script>
 
