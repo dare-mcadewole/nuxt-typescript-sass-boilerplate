@@ -1,11 +1,14 @@
+require('dotenv').config({
+  src: '~'
+})
 import fs from 'fs'
 import path from 'path'
 
 export default {
   mode: 'universal',
   server: {
-    host: '0.0.0.0',
-    port: 8080,
+    host: process.env.APP_HOST,
+    port: process.env.APP_PORT,
     https: {
       key: fs.readFileSync(path.resolve(__dirname, 'certs/snippets.key')),
       cert: fs.readFileSync(path.resolve(__dirname, 'certs/snippets.crt'))
@@ -57,6 +60,7 @@ export default {
   plugins: [
     '~/plugins/axios.ts',
     '~/plugins/font-awesome.js',
+    '~/plugins/i18n.ts'
   ],
   /*
   ** Nuxt.js dev-modules

@@ -23,7 +23,8 @@
     "axios": "^0.19.1",
     "nuxt": "^2.0.0",
     "nuxt-typed-vuex": "^0.1.15",
-    "scrollreveal": "^4.0.5"
+    "scrollreveal": "^4.0.5",
+    "vue-i18n": "^8.15.3"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.5.6",

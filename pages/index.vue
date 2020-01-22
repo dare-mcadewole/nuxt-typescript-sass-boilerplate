@@ -1,6 +1,7 @@
 <template>
   <div class="">
     <Logo />
+    <div>{{ $t('nav_links.create') }}</div>
   </div>
 </template>
 
