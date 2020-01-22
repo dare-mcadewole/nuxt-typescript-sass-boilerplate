@@ -1,5 +1,5 @@
 <template>
-  <h1 class="logo">{{ AppName }}</h1>
+  <h1 class="logo logo-size">{{ AppName }}</h1>
 </template>
 
 <script lang="ts">
@@ -22,6 +22,6 @@ export default class Logo extends Vue {
 <style lang="scss"scoped>
 .logo {
   text-shadow: 0 0 1px $header-font-color !important;
-  font-size: $title;
 }
+
 </style>

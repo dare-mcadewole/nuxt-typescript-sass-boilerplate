@@ -1,0 +1,104 @@
+.body {
+    font-size: $body-mobile;
+}
+
+.subtitle {
+    font-size: $subtitle-mobile;
+}
+
+.title {
+    font-size: $title-mobile;
+}
+
+.logo-size {
+    font-size: $logo-size-mobile;
+}
+
+// Responsive Typographic Styles
+@media screen and (min-width: 768px) {
+    .body {
+        font-size: $body;
+    }
+    
+    .subtitle {
+        font-size: $subtitle;
+    }
+    
+    .title {
+        font-size: $title;
+    }
+    
+    .logo-size {
+        font-size: $logo-size;
+    }
+}
+
+
+// Alignment classes
+.flex {
+    display: flex !important;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row-reverse {
+    flex-direction: column-reverse;
+}
+
+// Top Alignment
+.top-left {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.top-center {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.top-right {
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+// Center Alignments
+.center-left {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.center-right {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+// Right Alignments
+.bottom-left {
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.bottom-center {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.bottom-right {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
