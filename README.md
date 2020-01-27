@@ -1,11 +1,13 @@
-# Snippets
+# Nuxt-Typescipt-Sass Boilerplate
 
-> Web application to manage Code Snippets and Bucket(collection) of Code Snippets
+> Boilerplate for [NuxtJS](https://nuxtjs.org), [Typescript](https://www.typescriptlang.org/) 
+and [Sass](https://sass-lang.com/)-based projects. Feel free to customise as neccessary
+
+Documentation coming soon ...
 
 ## Get Started
 
 - Clone this repository
-- Generate an SSL certificate (**key** and **snippets.cert** file) and output to the `/certs` folder i.e. `/certs/snippets.key` and `/certs/snippets.crt`. If you need help, you can get help from this link [How to Create a Self-signed SSL Certificate](https://www.liquidweb.com/kb/how-to-create-a-self-signed-ssl-certificate-on-ubuntu/)
 
 ## Build Setup
 
