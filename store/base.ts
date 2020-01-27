@@ -1,14 +1,15 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
+import Cookies from 'js-cookie'
 
 @Module({
-    name: 'base',
+    name: 'BaseStore',
     namespaced: false,
     stateFactory: true
 })
-export default class Base extends VuexModule {
-    _app: string = 'Snippets'
+export default class BaseStore extends VuexModule {
+    _app: string = 'NTS-Boilerplate'
     _locales: Array<string> = [
-        'en', 'cn', 'fr'
+        'en', 'fr'
     ]
     _locale: string = 'en'
     _fallback_locale: string = 'en'
@@ -34,6 +35,7 @@ export default class Base extends VuexModule {
         commit: 'SET_LOCALE'
     })
     setLocale (locale: string) {
+        Cookies.set('lang', locale)
         return locale
     }
 }

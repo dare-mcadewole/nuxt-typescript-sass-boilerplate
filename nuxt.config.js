@@ -1,18 +1,12 @@
 require('dotenv').config({
   src: '~'
 })
-import fs from 'fs'
-import path from 'path'
 
 export default {
   mode: 'universal',
   server: {
     host: process.env.APP_HOST,
-    port: process.env.APP_PORT,
-    https: {
-      key: fs.readFileSync(path.resolve(__dirname, 'certs/snippets.key')),
-      cert: fs.readFileSync(path.resolve(__dirname, 'certs/snippets.crt'))
-    }
+    port: process.env.APP_PORT
   },
   /*
   ** Headers of the page
