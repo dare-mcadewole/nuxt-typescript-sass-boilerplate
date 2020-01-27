@@ -1,3 +1,23 @@
+// Device Visibility
+.desktop-only {
+    display: none;
+}
+
+.mobile-only {
+    display: initial;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+
+    .desktop-only {
+        display: initial;
+    }
+}
+
+// Typography
 .body {
     font-size: $body-mobile;
 }
@@ -12,6 +32,30 @@
 
 .logo-size {
     font-size: $logo-size-mobile;
+}
+
+.body-text {
+    font-size: $body;
+}
+
+.body-mobile-text {
+    font-size: $body-mobile;
+}
+
+.subtitle-text {
+    font-size: $subtitle;
+}
+
+.subtitle-mobile-text {
+    font-size: $subtitle-mobile;
+}
+
+.title-text {
+    font-size: $title;
+}
+
+.title-mobile-text {
+    font-size: $title-mobile;
 }
 
 // Responsive Typographic Styles
@@ -33,7 +77,6 @@
     }
 }
 
-
 // Alignment classes
 .flex {
     display: flex !important;
@@ -53,6 +96,22 @@
 
 .flex-row-reverse {
     flex-direction: column-reverse;
+}
+
+.middle {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
 }
 
 // Top Alignment
@@ -101,4 +160,125 @@
 .bottom-right {
     align-items: flex-end;
     justify-content: flex-end;
+}
+
+// Justify
+.space-between {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.space-around {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.space-evenly {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+// Form Elements
+.form-element {
+    border-radius: $form-element-radius;
+}
+
+// Color
+.primary {
+    background-color: $primary !important;
+}
+
+.primary-text {
+    color: $primary !important;
+}
+
+.secondary {
+    background-color: $secondary !important;
+}
+
+.secondary-text {
+    color: $secondary !important;
+}
+
+.black {
+    background-color: $black !important;
+}
+
+.black-text {
+    color: $black !important;
+}
+
+.dark {
+    background-color: $dark !important;
+}
+
+.dark-text {
+    color: $dark !important;
+}
+
+.light-gray {
+    background-color: $light-gray !important;
+}
+
+.light-gray-text {
+    color: $light-gray !important;
+}
+
+.lighter-gray {
+    background-color: $lighter-gray !important;
+}
+
+.lighter-gray-text {
+    color: $lighter-gray !important;
+}
+
+.faint-gray {
+    background-color: $faint-gray !important;
+}
+
+.faint-gray-text {
+    color: $faint-gray !important;
+}
+
+.alert {
+    background-color: $alert !important;
+}
+
+.alert-text {
+    color: $alert !important;
+}
+
+.success {
+    background-color: $success !important;
+}
+
+.success-text {
+    color: $success !important;
+}
+
+.warning {
+    background-color: $warning !important;
+}
+
+.warning-text {
+    color: $warning !important;
+}
+
+
+// Transform 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+ 
+.capitalize {
+    text-transform: capitalize;
+}
+
+.smallcaps {
+    text-transform: small-caps;
 }

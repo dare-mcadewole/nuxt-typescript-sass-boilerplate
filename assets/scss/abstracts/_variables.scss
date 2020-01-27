@@ -6,18 +6,27 @@ $secondary: #FFDA69;
 $alert: #EB5757;
 $success: #27AE60;
 $warning: #F2C94C;
-$body-font-color: #333333;
-$header-font-color: #000000;
+$white: #FFF;
+$light-gray: #F0F0F0;
+$lighter-gray: #FCFCFC;
+$faint-gray: #AAAAAA;
+$black: #000000;
+$dark: #333333;
+$body-font-color: $black;
+$header-font-color: $dark;
 
 // Border radius
 $radius: 12px;
-$form-input-radius: 100px;
+$form-element-radius: 100px;
 
 $base-padding: 24px;
 $base-padding-desktop: 48px;
-$base-margin-desktop: 48px;
-$base-margin: 24px;
+$body-margin-desktop: 100px;
+$body-margin: 20px;
+$section-margin-desktop: 130px;
+$section-margin: 70px;
 
 // Image
+$avatar: 50px;
 $avatar-dim-mobile: 100px;
 $avatar-dim-desktop: 100px;
