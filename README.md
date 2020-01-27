@@ -1,4 +1,4 @@
-# Nuxt-Typescipt-Sass Boilerplate
+# Nuxt-Typescript-Sass Boilerplate
 
 > Boilerplate for [NuxtJS](https://nuxtjs.org), [Typescript](https://www.typescriptlang.org/) 
 and [Sass](https://sass-lang.com/)-based projects. Feel free to customise as neccessary
