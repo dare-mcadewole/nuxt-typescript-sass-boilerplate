@@ -4,7 +4,7 @@
     <button @click="authenticate">Authenticate User</button>
     <button @click="logout">Logout</button>
 
-    <h1>{{ user }}</h1>
+    <h1>{{ username }}</h1>
   </div>
 </template>
 
@@ -12,7 +12,8 @@
 import { Vue, Component } from 'nuxt-property-decorator'
 import Logo from '~/components/Logo.vue'
 import { User, AuthUser } from '../contracts/UserContract'
-import { userStore } from '../store'
+import { userStore } from '~/store'
+import Cookie from '../utils/cookie'
 
 @Component({
   components: {
@@ -25,8 +26,8 @@ export default class Index extends Vue {
     password: 'password1'
   }
 
-  get user () {
-    return userStore.user ? userStore.user.name : '-'
+  get username (): string {
+    return userStore.userName
   }
 
   authenticate () {

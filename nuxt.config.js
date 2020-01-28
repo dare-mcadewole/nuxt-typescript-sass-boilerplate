@@ -8,11 +8,16 @@ export default {
     host: process.env.APP_HOST,
     port: process.env.APP_PORT
   },
+  router: {
+    middleware: [
+      'auth'
+    ]
+  },
   /*
   ** Headers of the page
   */
   head: {
-    title: 'Snippets',
+    title: 'NTS Boilerplate',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

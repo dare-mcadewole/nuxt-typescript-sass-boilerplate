@@ -1,6 +1,6 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
 import { User, AuthUser } from '~/contracts/UserContract'
-import Cookies from 'js-cookie'
+import Cookie from '~/utils/cookie'
 
 @Module({
     name: 'UserStore',
@@ -8,11 +8,16 @@ import Cookies from 'js-cookie'
     stateFactory: true
 })
 export default class UserStore extends VuexModule {
-    _token: string | null = null
+    _token: string = Cookie.token === undefined ? '' : Cookie.token
     _user: User | null = null
+    _username: string = Cookie.user === undefined ? '-' : Cookie.user
 
     get user(): User | null {
         return this._user
+    }
+
+    get userName (): string {
+        return this._username
     }
 
     @Mutation
@@ -21,9 +26,15 @@ export default class UserStore extends VuexModule {
     }
 
     @Mutation
+    SET_USERNAME_AND_TOKEN (payload: any): void {
+        this._username = payload.user
+        this._token = payload.token
+    }
+
+    @Mutation
     LOGOUT (): void {
         this._user = null
-        this._token = null
+        this._token = ''
     }
 
     @Mutation
@@ -46,15 +57,22 @@ export default class UserStore extends VuexModule {
             ...user,
             name: 'Dare Adewole II'
         }
-        Cookies.set('dotcom_user', authenticatedUser.name)
-        Cookies.set('user_token', 'YXBwbGljYXRpb25fdG9rZW5fZm9yX251eHRfdHNfc2Fzc19ib2lsZXJwbGF0ZQ==')
+        Cookie.user = authenticatedUser.name
+        Cookie.token = 'YXBwbGljYXRpb25fdG9rZW5fZm9yX251eHRfdHNfc2Fzc19ib2lsZXJwbGF0ZQ=='
         return authenticatedUser
+    }
+
+    @Action({
+        commit: 'SET_USERNAME_AND_TOKEN'
+    })
+    setUsernameAndToken (payload: any): any {
+        return payload
     }
 
     @Action
     logout () {
-        Cookies.remove('dotcom_user')
-        Cookies.remove('user_token')
+        Cookie.user = undefined
+        Cookie.token = undefined
         this.LOGOUT()
     }
 

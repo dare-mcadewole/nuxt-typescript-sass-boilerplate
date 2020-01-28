@@ -4,6 +4,18 @@
   </div>
 </template>
 
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator'
+import { initStoreData } from '~/store'
+
+@Component
+export default class DefaultLayout extends Vue {
+  mounted () {
+    // window.addEventListener('DOMContentLoaded', initStoreData)
+  }
+}
+</script>
+
 <style lang="scss">
 html {
   font-family: $font-family;
